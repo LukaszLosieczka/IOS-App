@@ -43,7 +43,8 @@ struct StartView: View {
                 }
 
             }
-        }.preferredColorScheme(.dark)
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

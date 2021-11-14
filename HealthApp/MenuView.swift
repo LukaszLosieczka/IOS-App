@@ -8,12 +8,37 @@
 import SwiftUI
 
 struct MenuView: View {
-    
-    @EnvironmentObject var signingIn: SigningIn
+    @State private var showingProfile = false 
     var body: some View{
         NavigationView{
-            Text("Menu")
-        }.preferredColorScheme(.dark)
+             VStack(){
+                 HStack{
+                     Text("HealthApp")
+                         .font(.system(size: 40,weight: .bold ,design: .serif))
+                         .foregroundColor(.white)
+                     
+                     Spacer()
+                     
+                     Button(action:{
+                         showingProfile.toggle()
+                     }){
+                        Image("default-avatar")
+                             .resizable()
+                     }
+                     .buttonStyle(CircleImageButton())
+                     .sheet(isPresented: $showingProfile){
+                         ProfileView()
+                     }
+                     
+                 }
+                 ScrollView(.vertical, showsIndicators: false){
+
+                 }
+             }
+             .navigationBarTitle("")
+             .navigationBarHidden(true)
+         }
+         .preferredColorScheme(.dark)
     }
 }
 

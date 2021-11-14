@@ -18,3 +18,12 @@ struct CustomButton: ButtonStyle{
             .font(.system(size: 30, weight: .bold, design: .serif))
     }
 }
+
+struct CircleImageButton: ButtonStyle{
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 55, height: 55)
+            .clipShape(Circle())
+            .grayscale(configuration.isPressed ? 1 : 0)
+    }
+}

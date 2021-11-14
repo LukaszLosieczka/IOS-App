@@ -41,6 +41,8 @@ struct LogInView: View {
                         .font(.system(size: 30,weight: .bold ,design: .serif))
                         .foregroundColor(Color(UIColor.darkGray))
                         .cornerRadius(12)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     
                     SecureField("Hasło", text:self.$password)
                         .placeholder(when: password.isEmpty){
@@ -58,9 +60,19 @@ struct LogInView: View {
                 Spacer(minLength: 40)
                 
                 Button("Zaloguj się"){
-                    signingIn.signInSuccess = true
+                    guard !email.isEmpty, !password.isEmpty else{
+                        return
+                    }
+                    
+                    signingIn.signIn(email: email, password: password)
                 }
                 .buttonStyle(CustomButton())
+                .alert("Email lub hasło są niepoprawne", isPresented: $signingIn.error){
+                    Button("OK"){
+                        self.email = ""
+                        self.password = ""
+                    }
+                }
                 
                 Spacer(minLength: 50)
             }
