@@ -27,3 +27,10 @@ struct CircleImageButton: ButtonStyle{
             .grayscale(configuration.isPressed ? 1 : 0)
     }
 }
+
+struct MenuButtonStyle: ButtonStyle{
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(configuration.isPressed ? Color.gray : Color.init(red: 30/255, green: 30/255, blue: 30/255))
+    }
+}

@@ -14,12 +14,15 @@ struct StartView: View {
             ZStack{
                 NavigationLink(destination: LogInView(), tag: "A", selection: $selection){
                     EmptyView()
-                }
+                }.navigationBarTitle("Wróć do Startu")
+                
                 NavigationLink(destination: MissingContenView(), tag: "B", selection: $selection){
                     EmptyView()
-                }
+                }.navigationBarTitle("Wróć do Startu")
                 
                 VStack(spacing: 50){
+                    Spacer()
+                    
                     VStack(spacing: 30){
                         Image("Logo icon")
                         
@@ -41,10 +44,11 @@ struct StartView: View {
                     }
                     Spacer(minLength: 80)
                 }
-
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .preferredColorScheme(.dark)
             }
         }
-        .preferredColorScheme(.dark)
     }
 }
 

@@ -13,32 +13,78 @@ struct ProfileView: View {
     @EnvironmentObject var signingIn: SigningIn
     
     @State private var loggedOut = false
+    @State private var selection: String? = nil
     var body: some View {
-        VStack(spacing: 30){
-            Spacer()
-            HStack{
-                Spacer()
+        NavigationView{
+            ZStack{
+                NavigationLink(destination: MissingContenView(), tag: "A", selection: $selection){
+                    EmptyView()
+                }.navigationBarTitle("Profil")
                 
-                Button("OK"){
-                    dismiss()
-                }
-                .font(.system(size: 20, weight: .bold))
+                NavigationLink(destination: MissingContenView(), tag: "B", selection: $selection){
+                    EmptyView()
+                }.navigationBarTitle("Profil")
                 
-                Spacer()
-                    .frame(width: 20)
+                NavigationLink(destination: MissingContenView(), tag: "C", selection: $selection){
+                    EmptyView()
+                }.navigationBarTitle("Profil")
+                
+                VStack(spacing: 10){
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        
+                        Button("OK"){
+                            dismiss()
+                        }
+                        .font(.system(size: 20, weight: .bold))
+                        
+                        Spacer()
+                            .frame(width: 20)
+                    }
+                    ScrollView(.vertical, showsIndicators: false){
+                        VStack{
+                            Image("default-avatar")
+                                .resizable()
+                                .frame(width: 130, height: 130)
+                                .clipShape(Circle())
+                            
+                            Text("Użytkownik")
+                                .font(.system(size: 40,weight: .bold ,design: .serif))
+                                .foregroundColor(.white)
+                        }
+                        
+                        VStack(spacing: 40){
+                            Button("Edytuj profil"){
+                                selection = "A"
+                            }.buttonStyle(CustomButton())
+                            
+                            Button("Edytuj cele"){
+                                selection = "B"
+                            }.buttonStyle(CustomButton())
+                            
+                            Button("Ustawienia"){
+                                selection = "C"
+                            }.buttonStyle(CustomButton())
+                            
+                            Button("Wyloguj się"){
+                                loggedOut.toggle()
+                                dismiss()
+                            }.buttonStyle(CustomButton())
+                        }
+                    }
+                    
+                    Spacer()
+                }.preferredColorScheme(.dark)
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+                    .onDisappear{
+                        if loggedOut{
+                            signingIn.signOut()
+                        }
+                    }
             }
-            ScrollView(.vertical, showsIndicators: false){
-                Button("Wyloguj się"){
-                    loggedOut.toggle()
-                    dismiss()
-                }.buttonStyle(CustomButton())
-            }
-        }.preferredColorScheme(.dark)
-            .onDisappear{
-                if loggedOut{
-                        signingIn.signOut()
-                }
-            }
+        }
     }
 }
 

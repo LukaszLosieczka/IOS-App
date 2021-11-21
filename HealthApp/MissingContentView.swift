@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct MissingContenView: View {
+    var text: String = ""
     var body: some View {
-        ZStack{
-            Color(red: 0, green: 0, blue: 0).ignoresSafeArea()
+        VStack{
             Text("Missing content")
+            Text(self.text)
         }
     }
 }
 
 struct MissingContenView_Previews: PreviewProvider {
     static var previews: some View {
-        MissingContenView()
+        MissingContenView(text: "1")
     }
 }
