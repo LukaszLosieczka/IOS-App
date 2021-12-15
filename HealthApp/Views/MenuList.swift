@@ -9,22 +9,23 @@ import SwiftUI
 
 struct MenuList: View {
     var body: some View{
-        VStack(spacing: 0){
+        VStack(spacing: 0.45){
             MenuRow(name:"Pomiary ciała", icon: "body",
-                    destination: MissingContenView(text: "1"))
+                    destination: MeasurementsView())
             MenuRow(name:"Odżywianie", icon: "food",
-                    destination: MissingContenView(text: "2"))
+                    destination: FoodStatsView())
             MenuRow(name:"Spożycie wody", icon: "water",
-                    destination: MissingContenView(text: "3"))
+                    destination: WaterStatsView())
             MenuRow(name:"Trening", icon: "fire",
-                    destination: MissingContenView(text: "4"))
+                    destination: TrainingMenuView())
             MenuRow(name:"Sen", icon: "moon",
                     destination: MissingContenView(text: "5"))
             MenuRow(name:"Objawy", icon: "doctor",
-                    destination: MissingContenView(text:"6"))
+                    destination: SymptomsMenuView())
             MenuRow(name:"Parametry życiowe", icon: "heartbeat",
                     destination: MissingContenView(text: "7"))
         }
+        .background(Color.gray)
         .cornerRadius(15)
     }
 }
@@ -33,6 +34,7 @@ struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             MenuList()
+                .preferredColorScheme(.dark)
         }
     }
 }

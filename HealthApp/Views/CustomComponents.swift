@@ -28,6 +28,18 @@ struct CircleImageButton: ButtonStyle{
     }
 }
 
+struct TrainingButton: ButtonStyle{
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(width: 200, height: 55)
+            .background(configuration.isPressed ? Color.gray : Color.init(red: 44/255, green: 44/255, blue: 44/255))
+            .foregroundColor(.white)
+            .cornerRadius(33)
+            .font(.system(size: 25, weight: .bold, design: .serif))
+    }
+}
+
 struct MenuButtonStyle: ButtonStyle{
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

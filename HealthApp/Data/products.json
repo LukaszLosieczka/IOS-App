@@ -1,0 +1,668 @@
+﻿[
+	{
+		"Food": "Milk, reduced fat (2%)",
+		"Energy": 50,
+		"Protein": 3.35,
+		"Carbohydrates": 4.91,
+		"Sugars": 4.89,
+		"Fat": 1.9,
+		"Water": 89.1
+	},
+	{
+		"Food": "Soy milk",
+		"Energy": 43,
+		"Protein": 2.6,
+		"Carbohydrates": 4.92,
+		"Sugars": 3.65,
+		"Fat": 1.47,
+		"Water": 90.36
+	},
+	{
+		"Food": "Almond milk, unsweetened, chocolate",
+		"Energy": 16,
+		"Protein": 0.46,
+		"Carbohydrates": 1.48,
+		"Sugars": 0.81,
+		"Fat": 1,
+		"Water": 96.26
+	},
+	{
+		"Food": "Rice milk",
+		"Energy": 47,
+		"Protein": 0.28,
+		"Carbohydrates": 9.17,
+		"Sugars": 5.28,
+		"Fat": 0.97,
+		"Water": 89.28
+	},
+	{
+		"Food": "Coconut milk",
+		"Energy": 31,
+		"Protein": 0.21,
+		"Carbohydrates": 2.92,
+		"Sugars": 2.5,
+		"Fat": 2.08,
+		"Water": 94.57
+	},
+	{
+		"Food": "Yogurt, NFS",
+		"Energy": 63,
+		"Protein": 5.25,
+		"Carbohydrates": 7.04,
+		"Sugars": 7.04,
+		"Fat": 1.55,
+		"Water": 85.06
+	},
+	{
+		"Food": "Chocolate milk, made from dry mix, NS as to type of milk",
+		"Energy": 72,
+		"Protein": 3.41,
+		"Carbohydrates": 10.13,
+		"Sugars": 9.63,
+		"Fat": 2.01,
+		"Water": 83.63
+	},
+	{
+		"Food": "Cheese, Camembert",
+		"Energy": 300,
+		"Protein": 19.8,
+		"Carbohydrates": 0.46,
+		"Sugars": 0.46,
+		"Fat": 24.26,
+		"Water": 51.8
+	},
+	{
+		"Food": "Cheese, Brie",
+		"Energy": 334,
+		"Protein": 20.75,
+		"Carbohydrates": 0.45,
+		"Sugars": 0.45,
+		"Fat": 27.68,
+		"Water": 48.42
+	},
+	{
+		"Food": "Cheese, Cheddar",
+		"Energy": 408,
+		"Protein": 23.3,
+		"Carbohydrates": 2.44,
+		"Sugars": 0.33,
+		"Fat": 34,
+		"Water": 36.6
+	},
+	{
+		"Food": "Cottage cheese, farmers",
+		"Energy": 143,
+		"Protein": 10.49,
+		"Carbohydrates": 3.18,
+		"Sugars": 2.52,
+		"Fat": 9.8,
+		"Water": 75.19
+	},
+	{
+		"Food": "Grilled cheese sandwich, NFS",
+		"Energy": 331,
+		"Protein": 10.77,
+		"Carbohydrates": 28.7,
+		"Sugars": 5.03,
+		"Fat": 19.22,
+		"Water": 37.52
+	},
+	{
+		"Food": "Mozzarella cheese, tomato, and basil, with oil and vinegar dressing",
+		"Energy": 139,
+		"Protein": 7.17,
+		"Carbohydrates": 3.86,
+		"Sugars": 2.32,
+		"Fat": 10.87,
+		"Water": 76.67
+	},
+	{
+		"Food": "Beef, NS as to cut, cooked, NS as to fat eaten",
+		"Energy": 184,
+		"Protein": 29.23,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 6.75,
+		"Water": 62.46
+	},
+	{
+		"Food": "Pork, NS as to cut, cooked, NS as to fat eaten",
+		"Energy": 211,
+		"Protein": 27.69,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 10.5,
+		"Water": 59.13
+	},
+	{
+		"Food": "Bacon, NS as to type of meat, cooked",
+		"Energy": 468,
+		"Protein": 33.92,
+		"Carbohydrates": 1.7,
+		"Sugars": 0,
+		"Fat": 35.09,
+		"Water": 23.65
+	},
+	{
+		"Food": "Bacon or side pork, fresh, cooked",
+		"Energy": 468,
+		"Protein": 33.92,
+		"Carbohydrates": 1.7,
+		"Sugars": 0,
+		"Fat": 35.09,
+		"Water": 23.65
+	},
+	{
+		"Food": "Ham, baby food, strained",
+		"Energy": 97,
+		"Protein": 11.3,
+		"Carbohydrates": 3.7,
+		"Sugars": 0,
+		"Fat": 3.8,
+		"Water": 80.5
+	},
+	{
+		"Food": "Meat stick, baby food",
+		"Energy": 184,
+		"Protein": 13.4,
+		"Carbohydrates": 1.1,
+		"Sugars": 0.8,
+		"Fat": 14.6,
+		"Water": 69.5
+	},
+	{
+		"Food": "Lamb, NS as to cut, cooked",
+		"Energy": 292,
+		"Protein": 24.32,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 20.77,
+		"Water": 53.28
+	},
+	{
+		"Food": "Goat, boiled",
+		"Energy": 142,
+		"Protein": 26.87,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 3,
+		"Water": 67.64
+	},
+	{
+		"Food": "Chicken, NS as to part, rotisserie, skin eaten",
+		"Energy": 196,
+		"Protein": 25.07,
+		"Carbohydrates": 0.1,
+		"Sugars": 0.1,
+		"Fat": 10.65,
+		"Water": 63.3
+	},
+	{
+		"Food": "Turkey, NFS",
+		"Energy": 139,
+		"Protein": 28.81,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 2.06,
+		"Water": 68.09
+	},
+	{
+		"Food": "Duck, roasted, skin not eaten",
+		"Energy": 200,
+		"Protein": 23.38,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 11.15,
+		"Water": 63.95
+	},
+	{
+		"Food": "Fish, NS as to type, raw",
+		"Energy": 109,
+		"Protein": 18.13,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 3.57,
+		"Water": 78.42
+	},
+	{
+		"Food": "Clams, cooked, NS as to cooking method",
+		"Energy": 135,
+		"Protein": 17.49,
+		"Carbohydrates": 4.35,
+		"Sugars": 0.03,
+		"Fat": 4.83,
+		"Water": 70.38
+	},
+	{
+		"Food": "Oysters, raw",
+		"Energy": 51,
+		"Protein": 5.71,
+		"Carbohydrates": 2.72,
+		"Sugars": 0.62,
+		"Fat": 1.71,
+		"Water": 89.04
+	},
+	{
+		"Food": "Shrimp, cooked, NS as to cooking method",
+		"Energy": 212,
+		"Protein": 15.15,
+		"Carbohydrates": 11.02,
+		"Sugars": 0.91,
+		"Fat": 11.6,
+		"Water": 59.85
+	},
+	{
+		"Food": "Egg, whole, cooked, NS as to cooking method",
+		"Energy": 175,
+		"Protein": 11.99,
+		"Carbohydrates": 0.69,
+		"Sugars": 0.35,
+		"Fat": 13.43,
+		"Water": 72.7
+	},
+	{
+		"Food": "Coconut, fresh",
+		"Energy": 354,
+		"Protein": 3.33,
+		"Carbohydrates": 15.23,
+		"Sugars": 6.23,
+		"Fat": 33.49,
+		"Water": 46.99
+	},
+	{
+		"Food": "Peanut butter sandwich, with regular peanut butter, on white bread",
+		"Energy": 384,
+		"Protein": 13.98,
+		"Carbohydrates": 39.84,
+		"Sugars": 7.14,
+		"Fat": 20.11,
+		"Water": 23.69
+	},
+	{
+		"Food": "Bread, whole grain white",
+		"Energy": 238,
+		"Protein": 10.66,
+		"Carbohydrates": 43.91,
+		"Sugars": 5,
+		"Fat": 2.15,
+		"Water": 39.6
+	},
+	{
+		"Food": "Noodles, whole grain, cooked",
+		"Energy": 148,
+		"Protein": 5.96,
+		"Carbohydrates": 29.91,
+		"Sugars": 0.75,
+		"Fat": 1.7,
+		"Water": 61.47
+	},
+	{
+		"Food": "Rice, white, with corn, no added fat",
+		"Energy": 117,
+		"Protein": 2.64,
+		"Carbohydrates": 25.76,
+		"Sugars": 0.83,
+		"Fat": 0.38,
+		"Water": 70.33
+	},
+	{
+		"Food": "Orange, raw",
+		"Energy": 47,
+		"Protein": 0.94,
+		"Carbohydrates": 11.75,
+		"Sugars": 9.35,
+		"Fat": 0.12,
+		"Water": 86.75
+	},
+	{
+		"Food": "Apple, dried",
+		"Energy": 243,
+		"Protein": 0.93,
+		"Carbohydrates": 65.89,
+		"Sugars": 57.19,
+		"Fat": 0.32,
+		"Water": 31.76
+	},
+	{
+		"Food": "Blueberries, dried",
+		"Energy": 317,
+		"Protein": 2.5,
+		"Carbohydrates": 80,
+		"Sugars": 67.5,
+		"Fat": 2.5,
+		"Water": 14.8
+	},
+	{
+		"Food": "Cherries, dried",
+		"Energy": 333,
+		"Protein": 1.25,
+		"Carbohydrates": 80.45,
+		"Sugars": 67.15,
+		"Fat": 0.73,
+		"Water": 16.6
+	},
+	{
+		"Food": "Banana chips",
+		"Energy": 519,
+		"Protein": 2.3,
+		"Carbohydrates": 58.4,
+		"Sugars": 35.34,
+		"Fat": 33.6,
+		"Water": 4.3
+	},
+	{
+		"Food": "Cranberries, dried",
+		"Energy": 308,
+		"Protein": 0.17,
+		"Carbohydrates": 82.8,
+		"Sugars": 72.56,
+		"Fat": 1.09,
+		"Water": 15.79
+	},
+	{
+		"Food": "Peach, dried",
+		"Energy": 239,
+		"Protein": 3.61,
+		"Carbohydrates": 61.33,
+		"Sugars": 41.74,
+		"Fat": 0.76,
+		"Water": 31.8
+	},
+	{
+		"Food": "Pear, dried",
+		"Energy": 262,
+		"Protein": 1.87,
+		"Carbohydrates": 69.7,
+		"Sugars": 62.2,
+		"Fat": 0.63,
+		"Water": 26.69
+	},
+	{
+		"Food": "Potato, NFS",
+		"Energy": 125,
+		"Protein": 1.87,
+		"Carbohydrates": 20.45,
+		"Sugars": 1.61,
+		"Fat": 4.24,
+		"Water": 72.09
+	},
+	{
+		"Food": "Spinach, raw",
+		"Energy": 23,
+		"Protein": 2.86,
+		"Carbohydrates": 3.63,
+		"Sugars": 0.42,
+		"Fat": 0.39,
+		"Water": 91.4
+	},
+	{
+		"Food": "Broccoli, raw",
+		"Energy": 34,
+		"Protein": 2.82,
+		"Carbohydrates": 6.64,
+		"Sugars": 1.7,
+		"Fat": 0.37,
+		"Water": 89.3
+	},
+	{
+		"Food": "Carrots, raw",
+		"Energy": 41,
+		"Protein": 0.93,
+		"Carbohydrates": 9.58,
+		"Sugars": 4.74,
+		"Fat": 0.24,
+		"Water": 88.29
+	},
+	{
+		"Food": "Sweet potato, NFS",
+		"Energy": 109,
+		"Protein": 1.31,
+		"Carbohydrates": 16.82,
+		"Sugars": 5.45,
+		"Fat": 4.28,
+		"Water": 76.56
+	},
+	{
+		"Food": "Tomatoes, raw",
+		"Energy": 18,
+		"Protein": 0.88,
+		"Carbohydrates": 3.89,
+		"Sugars": 2.63,
+		"Fat": 0.2,
+		"Water": 94.52
+	},
+	{
+		"Food": "Asparagus, raw",
+		"Energy": 20,
+		"Protein": 2.2,
+		"Carbohydrates": 3.88,
+		"Sugars": 1.88,
+		"Fat": 0.12,
+		"Water": 93.22
+	},
+	{
+		"Food": "Cauliflower, raw",
+		"Energy": 25,
+		"Protein": 1.92,
+		"Carbohydrates": 4.97,
+		"Sugars": 1.91,
+		"Fat": 0.28,
+		"Water": 92.07
+	},
+	{
+		"Food": "Cucumber, raw",
+		"Energy": 15,
+		"Protein": 0.65,
+		"Carbohydrates": 3.63,
+		"Sugars": 1.67,
+		"Fat": 0.11,
+		"Water": 95.23
+	},
+	{
+		"Food": "Garlic, raw",
+		"Energy": 149,
+		"Protein": 6.36,
+		"Carbohydrates": 33.06,
+		"Sugars": 1,
+		"Fat": 0.5,
+		"Water": 58.58
+	},
+	{
+		"Food": "Onions, raw",
+		"Energy": 40,
+		"Protein": 1.1,
+		"Carbohydrates": 9.34,
+		"Sugars": 4.24,
+		"Fat": 0.1,
+		"Water": 89.11
+	},
+	{
+		"Food": "Parsley, raw",
+		"Energy": 36,
+		"Protein": 2.97,
+		"Carbohydrates": 6.33,
+		"Sugars": 0.85,
+		"Fat": 0.79,
+		"Water": 87.71
+	},
+	{
+		"Food": "Mushrooms, fresh, cooked, no added fat",
+		"Energy": 27,
+		"Protein": 3.85,
+		"Carbohydrates": 4.06,
+		"Sugars": 2.47,
+		"Fat": 0.42,
+		"Water": 90.22
+	},
+	{
+		"Food": "Ratatouille",
+		"Energy": 65,
+		"Protein": 1.1,
+		"Carbohydrates": 5.74,
+		"Sugars": 3.39,
+		"Fat": 4.74,
+		"Water": 87.47
+	},
+	{
+		"Food": "Zucchini, pickled",
+		"Energy": 34,
+		"Protein": 1,
+		"Carbohydrates": 7.44,
+		"Sugars": 6.94,
+		"Fat": 0.28,
+		"Water": 88.11
+	},
+	{
+		"Food": "Butter, stick",
+		"Energy": 717,
+		"Protein": 0.85,
+		"Carbohydrates": 0.06,
+		"Sugars": 0.06,
+		"Fat": 81.11,
+		"Water": 16.17
+	},
+	{
+		"Food": "Olive oil",
+		"Energy": 884,
+		"Protein": 0,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 100,
+		"Water": 0
+	},
+	{
+		"Food": "Mayonnaise, light",
+		"Energy": 238,
+		"Protein": 0.37,
+		"Carbohydrates": 9.23,
+		"Sugars": 3.56,
+		"Fat": 22.22,
+		"Water": 66.13
+	},
+	{
+		"Food": "Sugar, NFS",
+		"Energy": 385,
+		"Protein": 0,
+		"Carbohydrates": 99.6,
+		"Sugars": 99.8,
+		"Fat": 0.32,
+		"Water": 0.02
+	},
+	{
+		"Food": "Honey",
+		"Energy": 304,
+		"Protein": 0.3,
+		"Carbohydrates": 82.4,
+		"Sugars": 82.12,
+		"Fat": 0,
+		"Water": 17.1
+	},
+	{
+		"Food": "Fudge, peanut butter",
+		"Energy": 436,
+		"Protein": 6.37,
+		"Carbohydrates": 67.3,
+		"Sugars": 62.58,
+		"Fat": 16.78,
+		"Water": 8.45
+	},
+	{
+		"Food": "Toffee, plain",
+		"Energy": 388,
+		"Protein": 4.67,
+		"Carbohydrates": 78.17,
+		"Sugars": 66.5,
+		"Fat": 8.22,
+		"Water": 7.11
+	},
+	{
+		"Food": "Toffee, chocolate covered",
+		"Energy": 541,
+		"Protein": 3.13,
+		"Carbohydrates": 63.73,
+		"Sugars": 59.89,
+		"Fat": 30.37,
+		"Water": 1.57
+	},
+	{
+		"Food": "Coffee, NS as to type",
+		"Energy": 1,
+		"Protein": 0.12,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 0.02,
+		"Water": 99.39
+	},
+	{
+		"Food": "Tea, hot, leaf, black",
+		"Energy": 1,
+		"Protein": 0,
+		"Carbohydrates": 0.3,
+		"Sugars": 0,
+		"Fat": 0,
+		"Water": 99.7
+	},
+	{
+		"Food": "Lemonade, fruit juice drink, light",
+		"Energy": 21,
+		"Protein": 0,
+		"Carbohydrates": 5,
+		"Sugars": 5,
+		"Fat": 0,
+		"Water": 94.98
+	},
+	{
+		"Food": "Wine, nonalcoholic",
+		"Energy": 6,
+		"Protein": 0.5,
+		"Carbohydrates": 1.1,
+		"Sugars": 1.1,
+		"Fat": 0,
+		"Water": 98.2
+	},
+	{
+		"Food": "Beer",
+		"Energy": 43,
+		"Protein": 0.46,
+		"Carbohydrates": 3.55,
+		"Sugars": 0,
+		"Fat": 0,
+		"Water": 91.96
+	},
+	{
+		"Food": "Mojito",
+		"Energy": 61,
+		"Protein": 0.09,
+		"Carbohydrates": 2.45,
+		"Sugars": 1.82,
+		"Fat": 0.03,
+		"Water": 89.76
+	},
+	{
+		"Food": "Vodka and tonic",
+		"Energy": 84,
+		"Protein": 0,
+		"Carbohydrates": 6.57,
+		"Sugars": 6.57,
+		"Fat": 0,
+		"Water": 84.89
+	},
+	{
+		"Food": "Whiskey",
+		"Energy": 231,
+		"Protein": 0,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 0,
+		"Water": 66.6
+	},
+	{
+		"Food": "Water, bottled, unsweetened",
+		"Energy": 0,
+		"Protein": 0,
+		"Carbohydrates": 0,
+		"Sugars": 0,
+		"Fat": 0,
+		"Water": 99.98
+	}
+]

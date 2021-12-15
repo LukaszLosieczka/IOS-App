@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Biegunka",
+    "depiction": "Biegunka jest często występującym objawem, który zazwyczaj trwa krótko. Przewlekła biegunka może wskazywać na potencjalnie poważne choroby, dlatego zawsze należy ja zdiagnozować. Podczas biegunki należy dbać o odpowiednie nawodnienie i równowagę elektrolitową.",
+    "treatment": "Leczenie biegunki jest zależne od przyczyny."
+  },
+
+  {
+    "name": "Ból brzucha",
+    "depiction": "Do najczęstszych przyczyn bólów brzucha można zaliczyć choroby zapalne oraz przebiegające z owrzodzeniem błony śluzowej (np. choroba wrzodowa żołądka i dwunastnicy). Kolejną grupą są choroby prowadzące do niedrożności jelit lub przewodów żółciowych czy trzustkowych. Rzadko przyczyną są stany wynikające z niedokrwienia narządów jamy brzusznej. Do przyczyn bardzo rzadkich zalicza się choroby metaboliczne czy neurologiczne.",
+    "treatment": "Często ból brzucha jest wyrazem banalnej, samoograniczającej się niesprawności organizmu. Z doświadczenia lub intuicyjnie wyczuwa się wówczas, że nie ma potrzeby szukania porady. Jeśli ból jest dokuczliwy, można przyjąć proste leki przeciwbólowe, niewymagające wypisania recepty, najlepiej paracetamol, i dodatkowo leki rozkurczowe typu No-spa czy Spasmolina. Zaleca się unikanie aspiryny i jej pochodnych (tzw. niesteroidowe leki przeciwzapalne, do których należy m.in. ibuprofen). Ostatnio dostępnych bez recepty leków hamujących wydzielanie kwasu solnego w żołądku (ranitydyna czy omeprazol lub podobne) nie należy stosować dłużej niż kilka, kilkanaście dni, najlepiej do czasu rychłej wizyty lekarskiej. Znaczne nasilenie bólu, jego przewlekłość lub wystąpienie innych niepokojących objawów powinny skłonić do zwrócenia się do lekarza, niekiedy nawet w trybie ostrym, do izby przyjęć w szpitalu."
+  },
+
+  {
+    "name": "Ból gardła",
+    "depiction": "Ból gardła jest powszechnie występującym objawem, który może mieć różne nasilenie, a niekiedy może być bardzo uciążliwy. Mogą skarżyć się na niego pacjenci w każdym wieku. Etiologia bólu gardła jest zazwyczaj infekcyjna, ale dolegliwość mogą również wywoływać inne schorzenia.",
+    "treatment": "Ból gardła jest powszechnym i często występującym objawem, dlatego duża część chorych próbuje radzić sobie z nim samodzielnie, stosując leki dostępne bez recepty, które są powszechnie dostępne w aptekach i sklepach. Dość często ból gardła jest na tyle uciążliwy, że skłania do wizyty u lekarza rodzinnego lub laryngologa. Właściwe leczenie zależy od przyczyny bólu, a ból gardła, szczególnie przewlekły lub bardzo silny, może być objawem poważnych chorób. Dlatego nie należy zwlekać z wizytą u lekarza w przypadku bólu przewlekłego albo nagłego pojawienia się silnego bólu bez cech infekcji lub towarzyszących niepokojących objawów, takich jak trudności w połykaniu czy krwawienie."
+  },
+
+  {
+    "name": "Ból stawów",
+    "depiction": "Bólem stawów nazywamy ból zlokalizowany w obrębie stawów, wynikający z patologii samego stawu, otaczających go struktur (takich jak więzadła, ścięgna czy kaletki maziowe), a czasami z innych przyczyn, niezwiązanych bezpośrednio ze stawem. Jest jedną z najczęściej występujących dolegliwości. Jeśli mija samoistnie w ciągu kilku dni, najczęściej nie oznacza poważnej choroby.",
+    "treatment": "Aby prawidłowo leczyć ból stawów, trzeba ustalić jego przyczynę. Następujące metody pomogą zmniejszyć ból stawów: Odciążanie stawu, Okłady z lodu, Leki przeciwbólowe."
+  },
+
+  {
+    "name": "Chrypka",
+    "depiction": "Chrypka to szorstki i matowy głos, który pojawia się, gdy w czasie mówienia tzw. struny głosowe, czyli fałdy głosowe drgają w sposób nieprawidłowy i nie mogą się stykać lub występują zaburzenia ich elastyczności na skutek różnych procesów chorobowych.",
+    "treatment": "Jeżeli krótkotrwała chrypka pojawia się nagle w czasie infekcji, nie wymaga szczegółowej diagnostyki a jedynie, obok leków łagodzących infekcję, odpoczynku strun głosowych, czyli ograniczenia do minimum używania głosu w czasie choroby. Należy również unikać czynników podrażniających struny głosowe, takich jak: kurz, dym tytoniowy i alkohol. Warto stosować wówczas inhalacje nawilżające błonę śluzową dróg oddechowych i leki przeciwkaszlowe."
+  },
+
+  {
+    "name": "Czkawka",
+    "depiction": "Czkawka jest odruchem, kontrolowanym przez specjalny ośrodek w mózgu. Polega na nagłym i mimowolnym skurczu przepony i mięśni międzyżebrowych, czyli mięśni, które odpowiadają za wciągnięcie powietrza do płuc – wdech. Jednak w przeciwieństwie do typowego oddychania, równocześnie występuje nagłe zamknięcie krtani na poziomie głośni.",
+    "treatment": "Czkawka przemijająca nie wymaga żadnej interwencji medycznej, szczególnie u zdrowych osób. U noworodków i niemowląt niejednokrotnie wystarczy zmiana pozycji ciała."
+  },
+
+  {
+    "name": "Duszność",
+    "depiction": "Duszność to subiektywne odczucie braku powietrza, trudności w oddychaniu lub zadyszki.",
+    "treatment": "Duszność w większości przypadków wymaga kontaktu z lekarzem. Jeżeli duszność jest tak nasilona, iż utrudnia mówienie, lub towarzyszy jej ból w klatce piersiowej, krwioplucie lub znaczne osłabienie, należy pilnie wezwać karetkę."
+  },
+
+  {
+    "name": "Gorączka",
+    "depiction": "Gorączka jest częstym i powszechnym objawem. Przyjmuje się, że prawidłowa ciepłota ciała wynosi 36,6°C. Jest to słuszne, o ile mierzy się ją pod pachą – za pomocą tradycyjnego termometru elektronicznego, termometru rtęciowego lub ciekłokrystalicznego (obecnie termometry rtęciowe wycofano z użycia, rtęć zastąpiono stopem metali, wykorzystywanym właśnie w tzw. termometrze ciekłokrystalicznym).",
+    "treatment": "O postępowaniu decydują: okoliczności powstania gorączki, tor i szybkość jej narastania oraz objawy towarzyszące (zwłaszcza stan ogólny gorączkującego). Jeśli chory lub jego rodzina mają wątpliwości, jak postąpić, należy zawsze zgłosić się do lekarza. Krótkotrwały wzrost ciepłoty ciała nie jest w zasadzie powodem do niepokoju. Z reguły jego przyczyną jest pospolita infekcja, przeziębienie lub zatrucie pokarmowe. Zwykle objawy, na przykład ropnej anginy, zapalenia płuc, ostrej biegunki i infekcji wirusowej są na tyle charakterystyczne, że wysuwają się na pierwszy plan. Wzrost temperatury jest naturalnym objawem obrony organizmu, prawidłowo reagującego na zakażenie. Gorączka uzupełnia tu obraz choroby, wymaga więc bezwarunkowo zgłoszenia się do lekarza, przyjęcia zleconych leków i zwykle pozostania w łóżku."
+  },
+
+  {
+    "name": "Gazy",
+    "depiction": "Gazy są naturalnie obecne w świetle jelita. Pochodzą z dwóch głównych źródeł: pierwsze to powietrze połykane podczas spożywania posiłków czy podczas mówienia, a drugie - produkty fermentacji jelitowej, zachodzącej głównie w jelicie grubym.",
+    "treatment": "W przypadku nadmiaru gazów należy:\n\n-zaprzestać żucia gumy, pić przez słomkę, jeść powoli, starannie rozdrabniając pokarm w jamie ustnej\n-jeżeli nie ma innych objawów doradza się staranną weryfikację spożywanych pokarmów i wykluczenie z diety tych pokarmów, o których powszechnie wiadomo, że są gazotwórcze (zobacz poniżej)\n-stosować probiotyki z myślą o przesunięciu w składzie flory jelitowej w kierunku bakterii niefermentujących"
+  },
+
+  {
+    "name": "Kaszel",
+    "depiction": "Kaszel jest odruchem obronnym służącym oczyszczaniu dróg oddechowych z nadmiaru wydzieliny lub ciał obcych.",
+    "treatment": "Jeśli kaszlowi towarzyszą inne niepokojące objawy, takie jak duszność (uczucie braku powietrza, trudności w oddychaniu), znaczne osłabienie, krwioplucie (odkrztuszanie krwi), należy niezwłocznie zgłosić się do lekarza."
+  },
+
+  {
+    "name": "Krwawienie z nosa",
+    "depiction": "Jama nosowa jest niezmiernie bogato unaczyniona, co jest niezbędne do pełnienia jej prawidłowych funkcji – oczyszczania, ocieplania oraz nawilżania wdychanego powietrza. Powoduje to, że krwawienie z tej okolicy jest jednym z najczęstszych. Przynajmniej raz w życiu u około 60% populacji wystąpi krwawienie z nosa o różnym stopniu nasilenia, natomiast jedynie w 10% przypadków niezbędna będzie interwencja lekarska.",
+    "treatment": "Należy uspokoić chorego i pozostawić go w pozycji siedzącej, nieco pochylonego do przodu. Skrzydełka nosa należy lekko uciskać przez kilka minut, a krew spływająca po tylnej ścianie gardła wypluwać, a nie połykać. Można zastosować zimne okłady na kark i grzbiet nosa. Po zatamowaniu krwawienia warto nawilżyć błonę śluzową (sól fizjologiczna, woda morska), żeby zapobiec ponownemu krwawieniu. Jeśli krwawienie nie ustaje pomimo zastosowania powyższych środków, należy zgłosić się do lekarza, najlepiej laryngologa."
+  },
+
+  {
+    "name": "Nieprawidłowe tętno",
+    "depiction": "Tętno to inaczej pulsowanie ścian tętnicy pod wpływem fali przepływającej krwi, które wyczuwa się po przyłożeniu palców do dużych tętnic (na szyi, nadgarstku, czy nodze). Tętno odzwierciedla pracę układu sercowo-naczyniowego. Zależy ono głównie od dwóch czynników – bicia serca, które pompuje krew do tętnic oraz stanu naczyń krwionośnych, które badamy.",
+    "treatment": "W razie stwierdzenia nieprawidłowego tętna w większości przypadków wskazana jest konsultacja kardiologiczna. W przypadku asymetrii tętna na analogicznych tętnicach po obu stronach ciała lub braku wyczuwalnego tętna na kończynach, u dorosłych najczęstszą przyczyną są zmiany miażdżycowe w naczyniach krwionośnych. W takiej sytuacji należy udać się do lekarza POZ, który zwykle kieruje pacjenta do angiologa."
+  },
+
+  {
+    "name": "Nudności i wymioty",
+    "depiction": "Nudności i wymioty nie są chorobami, lecz objawami chorób.\nNudności to nieprzyjemne, niebolesne, subiektywne uczucie potrzeby zwymiotowania.\nWymioty polegają na gwałtownym zwracaniu treści z przewodu pokarmowego, zwykle wprost z żołądka. Zwykle poprzedzone są nudnościami (jako sygnałem ostrzegawczym), ale czasem bez poprzedzających nudności.",
+    "treatment": "Nudności i wymioty słabo nasilone, o oczywistej przyczynie (choroba lokomocyjna, nadużycie alkoholu, potwierdzona ciąża, przykre zapachy czy wyobrażenia) nie wymagają natychmiastowej konsultacji lekarza. W części przypadków wystarczy unikanie wywołującej je przyczyny. Same nudności można często powstrzymać bardzo głębokim i powolnym oddychaniem. Należy również pamiętać, że w części przypadków nie ma sensu wstrzymywać wymiotów, gdyż mają one charakter obronny, usuwają truciznę z organizmu (najlepszym przykładem jest nadużycie alkoholu). Nie zawsze celowe jest również leczenie wymiotów u kobiet w ciąży, chociaż w razie tzw. niepowściągliwych wymiotów ciężarnych, konieczna jest wizyta u ginekologa i zastosowanie odpowiedniego leczenia."
+  },
+
+  {
+    "name": "Szczękościsk",
+    "depiction": "Szczękościsk to częściowa lub całkowita niemożność otwarcia jamy ustnej na skutek odruchowego skurczu mięśni stawu skroniowo-żuchwowego (m. żwacza, m. skroniowego i mięśni skrzydłowych).",
+    "treatment": "Należy się zgłosić do lekarza w celu ustalenia przyczyny szczękościsku i wdrożenia leczenia choroby podstawowej."
+  },
+
+  {
+    "name": "Szumy uszne",
+    "depiction": "Szumy uszne są częstym objawem występującym zwłaszcza u osób starszych. W znacznej mierze pogarszają one jakoś życia i budzą niepokój, dlatego należą do nierzadkich przyczyn konsultacji laryngologicznych.",
+    "treatment": "Nie wolno bagatelizować szumów usznych, a w razie ich wystąpienia należy zgłosić się do lekarza rodzinnego, który zwykle kieruje pacjenta na konsultację laryngologiczną. Warto zapamiętać czy objawy pojawiły się nagle, w jakich okolicznościach, jak długo trwają, czy towarzyszą im inne dolegliwości (np. ból, niedosłuch, zaburzenia równowagi). Odpowiedzi na te pytania mogą mieć znaczenie podczas poszukiwania przyczyny szumów."
+  }
+]

@@ -1,11 +1,11 @@
 //
-//  AppContentView.swift
+//  AppContentModel.swift
 //  HealthApp
 //
-//  Created by Łukasz on 13/11/2021.
+//  Created by Łukasz on 09/12/2021.
 //
 
-import SwiftUI
+import Foundation
 import FirebaseAuth
 
 class SigningIn: ObservableObject{
@@ -14,6 +14,14 @@ class SigningIn: ObservableObject{
     
     @Published var signInSuccess = false
     @Published var error = false
+    
+    init(){
+        if auth.currentUser != nil{
+            signInSuccess = true
+            print("AKTUALNY UŻYTKOWNIK ID:")
+            print(auth.currentUser!.uid)
+        }
+    }
     
     func signIn(email: String, password: String){
         auth.signIn(withEmail: email, password: password){
@@ -38,29 +46,5 @@ class SigningIn: ObservableObject{
         try? auth.signOut()
         self.signInSuccess = false
         print("Successfull sign out")
-    }
-}
-
-struct AppContentView: View {
-    
-    @StateObject var signingIn = SigningIn()
-    
-    var body: some View {
-        return Group {
-            if signingIn.signInSuccess {
-                MenuView()
-                    .environmentObject(signingIn)
-            }
-            else {
-                StartView()
-                    .environmentObject(signingIn)
-            }
-        }
-    }
-}
-
-struct AppContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        AppContentView()
     }
 }

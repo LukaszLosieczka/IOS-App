@@ -22,6 +22,9 @@ struct MenuView: View {
     @State private var showingProfile = false
     @State private var date: String = getDate()
     
+    @State var goalsProgress: CGFloat = 0.5
+    @State var progressText: String = "50%"
+    
     let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
     
     var body: some View{
@@ -67,34 +70,12 @@ struct MenuView: View {
                                     Text("celów")
                                     Spacer()
                                 }
-                                .font(.system(size: 20, weight: .bold, design: .serif))
+                                .font(.system(size: 18, weight: .bold, design: .serif))
                                 .foregroundColor(Color(red: 204/255, green: 112/255, blue: 0/255))
                                 
                                 Spacer()
                                 
-                                ZStack{
-                                    Circle()
-                                        .stroke(Color.white.opacity(0.3),
-                                                style: StrokeStyle(lineWidth: 18))
-                                        .frame(width: 130, height: 130)
-                                    
-                                    Circle()
-                                        .trim(from: 0, to: 0.5)
-                                        .stroke(LinearGradient(
-                                            gradient:Gradient(
-                                                colors:[
-                                                    Color(red:102/255, green:0/255, blue:0/255),
-                                                    Color(red:204/255, green:102/255, blue:0/255),
-                                                    Color(red:204/255, green:204/255, blue:0/255)]),
-                                            startPoint: .leading, endPoint: .trailing),
-                                                style: StrokeStyle(lineWidth: 18))
-                                        .frame(width: 130, height: 130)
-                                        .rotationEffect(.init(degrees: -90))
-                                    
-                                    Text("50 %")
-                                        .font(.system(size: 30, weight: .bold, design: .serif))
-                                        .foregroundColor(Color(red: 204/255,green: 112/255,blue: 0/255))
-                                }
+                                ProgressCircle(progress: $goalsProgress, text: $progressText)
                                 
                                 Spacer()
                                 
@@ -105,7 +86,7 @@ struct MenuView: View {
                                         }
                                     Spacer()
                                 }
-                                .font(.system(size: 20, weight: .bold, design: .serif))
+                                .font(.system(size: 18, weight: .bold, design: .serif))
                                 .foregroundColor(Color(red: 204/255, green: 112/255, blue: 0/255))
                                 
                                 Spacer()

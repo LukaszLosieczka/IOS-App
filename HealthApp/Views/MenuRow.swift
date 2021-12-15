@@ -17,7 +17,7 @@ struct MenuRow<DestinationType: View>: View{
         ZStack{
             NavigationLink(destination: self.destination, tag: true, selection: $selected){
                 EmptyView()
-            }.navigationBarTitle("Wróć do Menu")
+            }.navigationBarTitle("Menu")
             Button(action: {
                 self.selected = true
             }, label: {
