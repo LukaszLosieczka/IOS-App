@@ -19,6 +19,18 @@ struct CustomButton: ButtonStyle{
     }
 }
 
+struct CustomButton2: ButtonStyle{
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(width: 250, height: 50)
+            .background(configuration.isPressed ? Color.gray : Color.init(red: 44/255, green: 44/255, blue: 44/255))
+            .foregroundColor(.white)
+            .cornerRadius(33)
+            .font(.system(size: 25, weight: .bold, design: .serif))
+    }
+}
+
 struct CircleImageButton: ButtonStyle{
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

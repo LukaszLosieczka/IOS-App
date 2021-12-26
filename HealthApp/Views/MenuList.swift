@@ -16,10 +16,12 @@ struct MenuList: View {
                     destination: FoodStatsView())
             MenuRow(name:"Spożycie wody", icon: "water",
                     destination: WaterStatsView())
+            MenuRow(name: "Produkty", icon: "products",
+                    destination: ProductsMenuView())
             MenuRow(name:"Trening", icon: "fire",
                     destination: TrainingMenuView())
-            MenuRow(name:"Sen", icon: "moon",
-                    destination: MissingContenView(text: "5"))
+//            MenuRow(name:"Sen", icon: "moon",
+//                    destination: MissingContenView(text: "5"))
             MenuRow(name:"Objawy", icon: "doctor",
                     destination: SymptomsMenuView())
             MenuRow(name:"Parametry życiowe", icon: "heartbeat",

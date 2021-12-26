@@ -1,49 +1,48 @@
 //
-//  TrainingMenuView.swift
+//  ProductsMenuView.swift
 //  HealthApp
 //
-//  Created by Łukasz on 04/12/2021.
+//  Created by Łukasz on 26/12/2021.
 //
 
 import SwiftUI
 
-struct TrainingMenuView: View {
-    @StateObject var training = CurrentTraining()
-    @StateObject var trainings = TrainingsList()
-    
+struct ProductsMenuView: View {
     @State private var inProgress: Bool? = false
     @State private var searchText: String = ""
-    //@State var trainings: [Dictionary<String, AnyObject>] = getTrainings()
+    
+    @StateObject var products = ProductsList()
+    @StateObject var product = CurrentProduct()
     
     var body: some View {
         ScrollView(showsIndicators: false){
             ZStack{
-                NavigationLink(destination: TrainingView().environmentObject(training), tag: true, selection: $inProgress){
+                NavigationLink(destination: ProductView().environmentObject(product), tag: true, selection: $inProgress){
                     EmptyView()
                 }
                 VStack(spacing: 30){
                     SearchBar(text: $searchText)
                     HStack{
                         Spacer()
-                        VStack(spacing: 0.47){
+                        VStack(spacing: 0.5){
                             
-                            ForEach(trainings.trainingList.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) }), id: \.self.id){ t in
+                            ForEach(products.productsList.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })
+                                    , id: \.self.id){ p in
                                 
                                 Button(action:{
-                                    training.setParameters(
-                                        name: t.name,
-                                        numberOfExercises:t.numberOfExercises,
-                                        minutesOfExercises:t.minutesOfExercises,
-                                        minutesOfResting:t.minutesOfResting,
-                                        caloriesBurned: t.caloriesBurned,
-                                        image: t.image)
-                                    training.paused = false
+                                    product.setParameters(name: p.name,
+                                                          carbohydrates: p.carbohydrates,
+                                                          energy: p.energy,
+                                                          fat: p.fat,
+                                                          protein: p.protein,
+                                                          sugars: p.sugars,
+                                                          water: p.water)
                                     inProgress = true
                                 }, label: {
                                     HStack{
                                         Spacer()
                                             .frame(width: 15)
-                                        Text(t.name)
+                                        Text(p.name.components(separatedBy: ",")[0])
                                             .font(.system(size: 23, weight: .bold, design: .serif))
                                             .foregroundColor(Color.white)
                                         Spacer()
@@ -67,35 +66,15 @@ struct TrainingMenuView: View {
                     }
                 }
             }
-        }.navigationBarTitle("Trening")
+        }.navigationBarTitle("Produkty")
          .onAppear {
-             trainings.updateData()
-            }
+             products.updateData()
+         }
     }
 }
 
-struct TrainingMenuView_Previews: PreviewProvider {
+struct ProductsMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingMenuView()
+        ProductsMenuView()
     }
 }
-
-
-
-
-
-//func getTrainings() ->[Dictionary<String, AnyObject>]{
-//    var result :[Dictionary<String, AnyObject>] = []
-//
-//    if let path = Bundle.main.path(forResource: "trainings", ofType: "json") {
-//        do {
-//            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-//            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-//            if let jsonResult = jsonResult as? [Dictionary<String, AnyObject>]{
-//                result = jsonResult
-//            }
-//        }catch {}
-//    }
-//    return result
-//}
-

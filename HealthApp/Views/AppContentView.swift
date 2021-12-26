@@ -9,24 +9,21 @@ import SwiftUI
 
 struct AppContentView: View {
     
-    @StateObject var signingIn = SigningIn()
+    @StateObject var currentUser = CurrentUser()
     
     var body: some View {
         return Group {
-            if signingIn.signInSuccess {
+            if currentUser.sigingInSuccess && currentUser.user != nil{
                 MenuView()
-                    .environmentObject(signingIn)
+                    .environmentObject(currentUser)
+            }
+            else if currentUser.sigingInSuccess && currentUser.user == nil{
+                LoadingView()
             }
             else {
                 StartView()
-                    .environmentObject(signingIn)
+                    .environmentObject(currentUser)
             }
         }
-    }
-}
-
-struct AppContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        AppContentView()
     }
 }

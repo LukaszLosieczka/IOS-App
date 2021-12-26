@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 struct FoodStatsView: View {
     @State var progress: CGFloat = 0.7
     @State var text: String = "750 / 2500 kcal"
     
-    @State var foodInput: String = ""
+    @State var input: String = ""
     
     var body: some View {
         ScrollView{
@@ -30,20 +31,41 @@ struct FoodStatsView: View {
                                progress: $progress,
                                text: $text)
                 
-                TextField("", text:self.$foodInput)
-                    .placeholder(when: foodInput.isEmpty){
+                TextField("", text:self.$input)
+                    .placeholder(when: input.isEmpty){
                         Text("Spożyte kalorie [kcal]")
                             .foregroundColor(.gray)
                             .font(.system(size: 28,weight: .bold ,design: .serif))
                     }
+                    .keyboardType(.decimalPad)
                     .padding()
                     .frame(minWidth: 200, idealWidth: 340, maxWidth: 340, idealHeight: 60)
                     .background(Color.white)
                     .font(.system(size: 28,weight: .bold ,design: .serif))
                     .foregroundColor(Color(UIColor.darkGray))
                     .cornerRadius(12)
-                    .autocapitalization(.none)
                     .disableAutocorrection(true)
+                    .keyboardType(.decimalPad)
+                    .onTapGesture {
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+
+                    }
+                    .onReceive(Just(input)){ newInput in
+                        let filtered = newInput.filter { ".0123456789".contains($0) }
+                        
+                        if filtered.components(separatedBy: ".").count - 1 > 1{
+                            self.input = String(filtered.dropLast())
+                        }
+                        
+                        else if filtered.prefix(1) == "."{
+                            self.input = ""
+                        }
+                        
+                        else if newInput != filtered{
+                            self.input = filtered
+                        }
+                        print(filtered)
+                    }
                 
                 Button("Dodaj"){
                     

@@ -11,7 +11,7 @@ struct LogInView: View {
     @State private var email = ""
     @State private var password = ""
     
-    @EnvironmentObject var signingIn: SigningIn
+    @EnvironmentObject var currentUser: CurrentUser
     var body: some View {
         ScrollView(showsIndicators: false){
             
@@ -63,10 +63,10 @@ struct LogInView: View {
                     return
                 }
                 
-                signingIn.signIn(email: email, password: password)
+                currentUser.signIn(email: email, password: password)
             }
             .buttonStyle(CustomButton())
-            .alert("Email lub hasło są niepoprawne", isPresented: $signingIn.error){
+            .alert("Email lub hasło są niepoprawne", isPresented: $currentUser.error){
                 Button("OK"){
                     self.email = ""
                     self.password = ""

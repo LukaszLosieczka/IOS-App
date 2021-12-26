@@ -22,8 +22,11 @@ struct MenuView: View {
     @State private var showingProfile = false
     @State private var date: String = getDate()
     
-    @State var goalsProgress: CGFloat = 0.5
-    @State var progressText: String = "50%"
+    @EnvironmentObject var currentUser: CurrentUser
+    
+    @State var currentDay: Day = Day(date: getDate())
+    @State var goalsProgress: CGFloat = 0
+    @State var progressText: String = "0%"
     
     let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
     
@@ -44,7 +47,7 @@ struct MenuView: View {
                         Button(action:{
                             showingProfile.toggle()
                         }){
-                            Image("default-avatar")
+                            Image(currentUser.user!.image)
                                 .resizable()
                         }
                         .buttonStyle(CircleImageButton())
@@ -55,7 +58,7 @@ struct MenuView: View {
                     }
                     ScrollView(showsIndicators: false){
                         HStack{
-                            Text("Witaj Użytkowniku!")
+                            Text("Witaj " + currentUser.user!.name + "!")
                                 .font(.system(size: 25, weight: .bold, design: .serif))
                             Spacer()
                         }
@@ -82,7 +85,12 @@ struct MenuView: View {
                                 VStack{
                                     Text(date)
                                         .onReceive(timer){ (_) in
+                                            let lastDate = self.date
                                             self.date = getDate()
+                                            if lastDate != self.date{
+                                                updateDay()
+                                                checkProgress()
+                                            }
                                         }
                                     Spacer()
                                 }
@@ -109,13 +117,53 @@ struct MenuView: View {
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
+            .onAppear(perform: {
+                updateDay()
+                checkProgress()
+            })
+            .onDisappear(perform: {
+                if currentUser.sigingInSuccess{
+                    currentUser.update()
+                }
+            })
          }
          .preferredColorScheme(.dark)
     }
-}
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
+    
+    func updateDay(){
+        currentDay = (currentUser.user?.lastDay())!
+        
+        if currentDay.date != date{
+            let newDay = Day(date:date)
+            currentDay = newDay
+            currentUser.addNewDay(day: newDay)
+        }
+    }
+    
+    func checkProgress(){
+        var goalsAchived:Double = 0
+        
+        if currentDay.water >= currentUser.user!.waterGoal{
+            goalsAchived += 1
+        }
+        
+        if currentDay.energy >= currentUser.user!.energyGoal{
+            goalsAchived += 1
+        }
+        
+        if currentDay.training >= currentUser.user!.trainingGoal{
+            goalsAchived += 1
+        }
+        
+        let progress:Double = goalsAchived / 3.0
+        self.goalsProgress = CGFloat(progress)
+        self.progressText = String(Int(progress * 100)) + "%"
+        
     }
 }
+
+//struct MenuView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MenuView()
+//    }
+//}

@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     @Environment(\.dismiss) var dismiss
     
-    @EnvironmentObject var signingIn: SigningIn
+    @EnvironmentObject var currentUser: CurrentUser
     
     @State private var loggedOut = false
     @State private var selection: String? = nil
@@ -44,14 +44,15 @@ struct ProfileView: View {
                     }
                     ScrollView(.vertical, showsIndicators: false){
                         VStack{
-                            Image("default-avatar")
+                            Image(currentUser.user!.image)
                                 .resizable()
                                 .frame(width: 130, height: 130)
                                 .clipShape(Circle())
                             
-                            Text("Użytkownik")
+                            Text(currentUser.user!.name + " " + currentUser.user!.surname)
                                 .font(.system(size: 40,weight: .bold ,design: .serif))
                                 .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
                         }
                         
                         VStack(spacing: 40){
@@ -80,7 +81,7 @@ struct ProfileView: View {
                     .navigationBarHidden(true)
                     .onDisappear{
                         if loggedOut{
-                            signingIn.signOut()
+                            currentUser.signOut()
                         }
                     }
             }
