@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import SwiftUI
+import SwiftUICharts
 
 class CurrentUser: ObservableObject{
     
@@ -101,10 +102,30 @@ class CurrentUser: ObservableObject{
             newValue = (user?.days[0].training)! + value
             fbName = "EnergyBurned"
         }
+        else if n == "fat"{
+            newValue = (user?.days[0].fat)! + value
+            fbName = "Fat"
+        }
+        else if n == "protein"{
+            newValue = (user?.days[0].protein)! + value
+            fbName = "Protein"
+        }
+        else if n == "sugars"{
+            newValue = (user?.days[0].sugars)! + value
+            fbName = "Sugars"
+        }
         
         let db = Firestore.firestore()
         db.collection("users").document(self.auth.currentUser!.uid).collection("days").document((user?.days[0].id)!)
             .setData([fbName:newValue], merge: true)
+    }
+    
+    func changeMeasurement(name: String, value: Double){
+        var measurements = user?.getMeasurement(name: name)
+        measurements![getDate()] = value
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(self.auth.currentUser!.uid).setData([name:measurements as Any], merge: true)
     }
     
     func update(){

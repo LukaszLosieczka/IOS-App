@@ -8,30 +8,40 @@
 import SwiftUI
 
 struct MeasurementsView: View {
-    @State var date: String = getDate()
+    @State private var inProgress: Bool? = false
     
-    let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
+    @StateObject var measurement = CurrentMeasurement()
+    @StateObject var list = MeasurementsList()
+    
+    @EnvironmentObject var currentUser: CurrentUser
+    
+    init(){
+        
+    }
     
     var body: some View {
         ScrollView(showsIndicators: false){
-            VStack(spacing: 30){
-                DataPanelView(name: "Waga", unit: "kg", value: "80", date: $date)
+            ZStack{
+                NavigationLink(destination: MeasurementDetailView().environmentObject(measurement), tag: true, selection: $inProgress){
+                    EmptyView()
+                }
                 
-                DataPanelView(name: "Wzrost", unit: "cm", value: "180", date: $date)
-                
-                DataPanelView(name: "Obwód talii", unit: "cm", value: "73", date: $date)
-                
-                DataPanelView(name: "Temperatura ciała", unit: "°C", value: "36.6", date: $date)
-                
-                DataPanelView(name: "Tkanka tłuszczowa", unit: "%", value: "--", date: $date)
-                
-                DataPanelView(name: "Wskaźnik masy ciała", unit: "BMI", value: "22.99", date: $date)
+                VStack(spacing: 30){
+                    ForEach(list.measurementsList, id: \.self.id){ m in
+                        DataPanelView(name: m.namePL, unit: m.unit, value: String((currentUser.user?.getLastMeasurement(name: m.name).1)!),
+                                      date: String((currentUser.user?.getLastMeasurement(name: m.name).0)!))
+                            .onTapGesture {
+                                measurement.setParameters(name: m.name,
+                                                          namePL: m.namePL,
+                                                          unit: m.unit,
+                                                          last7: (currentUser.user?.getLast7Measurements(name: m.name, namePL: m.namePL))!)
+                                self.inProgress = true
+                            }
+                    }
+                }
             }
         }
         .navigationBarTitle("Pomiary ciała")
-        .onReceive(timer){ (_) in
-            self.date = getDate()
-        }
     }
 }
 

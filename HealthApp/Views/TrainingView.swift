@@ -33,7 +33,7 @@ struct ExercisesView: View {
 
     
     @State var startingTime = 5
-    @State var trainingTime = 0
+    @State var trainingTime:Double = 0.0
     @State var message = "5"
     @State var started = false
     var body: some View{
@@ -67,7 +67,7 @@ struct ExercisesView: View {
                     }
                 }
             
-            Text(formatTime(time: trainingTime))
+            Text(formatTime(time: Int(trainingTime)))
                 .font(.system(size: 50,weight: .bold ,design: .serif))
                 .foregroundColor(Color(red:200/255, green:100/255, blue:0/255))
                 .onReceive(timer){ (_) in
@@ -111,7 +111,7 @@ struct RestingView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    @State var restingTime = 0
+    @State var restingTime:Double = 0.0
     var body: some View{
         VStack(spacing: 20){
             Text("Czas na przerwę")
@@ -122,7 +122,7 @@ struct RestingView: View {
                 .resizable()
                 .scaledToFit()
             
-            Text(formatTime(time: restingTime))
+            Text(formatTime(time: Int(restingTime)))
                 .font(.system(size: 45,weight: .bold ,design: .serif))
                 .foregroundColor(Color(red:0/255, green:0/255, blue:250/255))
                 .onReceive(timer){ (_) in
@@ -185,6 +185,7 @@ struct FinishView: View {
 
 struct TrainingView: View {
     @EnvironmentObject var training: CurrentTraining
+    @EnvironmentObject var currentUser: CurrentUser
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State var exercisesDone = 0
@@ -192,7 +193,11 @@ struct TrainingView: View {
     var body: some View {
         return Group {
             if  exercisesDone == training.numberOfExercises || exercisesSkipped == training.numberOfExercises{
-                FinishView()
+                FinishView().onAppear(perform: {
+                    let value = Double(exercisesDone/training.numberOfExercises) * training.caloriesBurned
+                    currentUser.addValue(name: "training", value: value)
+                    currentUser.update()
+                })
             }
             else if !training.paused{
                 ExercisesView(exercisesDone: $exercisesDone, exercisesSkipped: $exercisesSkipped)

@@ -86,7 +86,7 @@ struct WaterStatsView: View {
                                         
                     Button("Dodaj"){
                         if !input.isEmpty{
-                            let inputD = Double(input)! / 1000
+                            let inputD = Double(input)!
                             self.currentUser.addValue(name: "water", value: inputD)
                             
                             self.progress = ((currentUser.user?.lastDay().water)! + inputD) / currentUser.user!.waterGoal
@@ -94,15 +94,22 @@ struct WaterStatsView: View {
                             let progressValue = round(10 * self.progress * currentUser.user!.waterGoal) / 10
                             let goal = round(10 * currentUser.user!.waterGoal) / 10
                             
-                            self.text = String(progressValue) + " / " + String(goal) + " l"
+                            self.text = String(progressValue) + " / " + String(goal/1000) + " l"
                             
                             self.input = ""
+                            self.isEditing = false
+                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                             
                             currentUser.update()
                         }
                     }
                     .buttonStyle(CustomButton2())
                 }
+                
+                Text("Tygodniowe")
+                    .font(.system(size: 25,weight: .bold ,design: .serif))
+                
+                Chart(points: currentUser.user!.getWeekValues(name: "water", namePL: "Woda"))
             }
         }
         .navigationBarTitle("Spożycie wody", displayMode: .inline)
@@ -120,7 +127,7 @@ struct WaterStatsView: View {
         self.progress = (currentUser.user?.lastDay().water)! / currentUser.user!.waterGoal
         let progressValue = round(10 * self.progress * currentUser.user!.waterGoal) / 10
         let goal = round(10 * currentUser.user!.waterGoal) / 10
-        self.text = String(progressValue) + " / " + String(goal) + " l"
+        self.text = String(progressValue/1000) + " / " + String(goal/1000) + " l"
     }
 }
 

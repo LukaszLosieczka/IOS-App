@@ -13,7 +13,7 @@ struct MenuList: View {
             MenuRow(name:"Pomiary ciała", icon: "body",
                     destination: MeasurementsView())
             MenuRow(name:"Odżywianie", icon: "food",
-                    destination: FoodStatsView())
+                    destination: FoodStatsMenuView())
             MenuRow(name:"Spożycie wody", icon: "water",
                     destination: WaterStatsView())
             MenuRow(name: "Produkty", icon: "products",

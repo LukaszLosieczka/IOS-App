@@ -96,6 +96,12 @@ class AudioPlayer{
     
 }
 
+extension Date {
+    var dayBefore: Date{
+        return Calendar.current.date(byAdding: .day, value: -1, to: self)!
+    }
+}
+
 
 //if let path = Bundle.main.path(forResource: "products", ofType: "json") {
 //    do {

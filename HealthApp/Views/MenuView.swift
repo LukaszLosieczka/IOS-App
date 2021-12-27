@@ -135,8 +135,10 @@ struct MenuView: View {
         
         if currentDay.date != date{
             let newDay = Day(date:date)
-            currentDay = newDay
-            currentUser.addNewDay(day: newDay)
+            if !((currentUser.user?.days.contains(where: { $0.hash == newDay.hash})) != nil){
+                currentDay = newDay
+                currentUser.addNewDay(day: newDay)
+            }
         }
     }
     
@@ -155,7 +157,23 @@ struct MenuView: View {
             goalsAchived += 1
         }
         
-        let progress:Double = goalsAchived / 3.0
+        if currentDay.carbo >= currentUser.user!.carboGoal{
+            goalsAchived += 1
+        }
+        
+        if currentDay.protein >= currentUser.user!.proteinGoal{
+            goalsAchived += 1
+        }
+        
+        if currentDay.sugars >= currentUser.user!.sugarsGoal{
+            goalsAchived += 1
+        }
+        
+        if currentDay.fat >= currentUser.user!.fatGoal{
+            goalsAchived += 1
+        }
+        
+        let progress:Double = goalsAchived / 7.0
         self.goalsProgress = CGFloat(progress)
         self.progressText = String(Int(progress * 100)) + "%"
         

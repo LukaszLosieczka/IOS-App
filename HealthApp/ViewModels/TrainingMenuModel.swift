@@ -12,13 +12,13 @@ import Firebase
 class CurrentTraining: ObservableObject{
     @Published var name = ""
     @Published var numberOfExercises: Int = 0
-    @Published var minutesOfExercises: Int = 0
-    @Published var minutesOfResting: Int = 0
+    @Published var minutesOfExercises: Double = 0
+    @Published var minutesOfResting: Double = 0
     @Published var caloriesBurned: Double = 0
     @Published var image = ""
     @Published var paused = false
     
-    func setParameters(name: String, numberOfExercises: Int, minutesOfExercises: Int, minutesOfResting: Int, caloriesBurned: Double, image: String){
+    func setParameters(name: String, numberOfExercises: Int, minutesOfExercises: Double, minutesOfResting: Double, caloriesBurned: Double, image: String){
         self.name = name
         self.numberOfExercises = numberOfExercises
         self.minutesOfExercises = minutesOfExercises
@@ -111,8 +111,8 @@ class TrainingsList: ObservableObject {
                             return Training(id: d.documentID,
                                             name: d["name"] as? String ?? "",
                                             numberOfExercises: d["numberOfExercises"] as? Int ?? 0,
-                                            minutesOfExercises: d["minutesOfExercises"] as? Int ?? 0,
-                                            minutesOfResting: d["minutesOfResting"] as? Int ?? 0,
+                                            minutesOfExercises: d["minutesOfExercises"] as? Double ?? 0,
+                                            minutesOfResting: d["minutesOfResting"] as? Double ?? 0,
                                             caloriesBurned: d["caloriesBurned"] as? Double ?? 0,
                                             image: d["image"] as? String ?? "")
                         }

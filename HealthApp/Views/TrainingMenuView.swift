@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct TrainingMenuView: View {
+    @EnvironmentObject var currentUser: CurrentUser
+    
     @StateObject var training = CurrentTraining()
     @StateObject var trainings = TrainingsList()
     
     @State private var inProgress: Bool? = false
     @State private var searchText: String = ""
+    
+    @State var progress: CGFloat = 0
+    @State var text: String = "0.0 / 0.0 kcal"
     //@State var trainings: [Dictionary<String, AnyObject>] = getTrainings()
     
     var body: some View {
@@ -22,6 +27,15 @@ struct TrainingMenuView: View {
                     EmptyView()
                 }
                 VStack(spacing: 30){
+                    ProgressCircle(colors:[Color(red: 199/255, green: 141/255, blue: 32/255)],
+                                   width: 250,
+                                   height: 250,
+                                   textSize: 20,
+                                   textColor: Color.white,
+                                   lineWidth: 25,
+                                   progress: $progress,
+                                   text: $text)
+                    
                     SearchBar(text: $searchText)
                     HStack{
                         Spacer()
@@ -70,7 +84,15 @@ struct TrainingMenuView: View {
         }.navigationBarTitle("Trening")
          .onAppear {
              trainings.updateData()
-            }
+             updateProgress()
+         }
+    }
+    
+    func updateProgress(){
+        self.progress = (currentUser.user?.lastDay().training)! / currentUser.user!.trainingGoal
+        let progressValue = round(10 * self.progress * currentUser.user!.trainingGoal) / 10
+        let goal = round(10 * currentUser.user!.trainingGoal) / 10
+        self.text = String(progressValue) + " / " + String(goal) + " kcal"
     }
 }
 

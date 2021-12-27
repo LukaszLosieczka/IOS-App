@@ -11,7 +11,7 @@ struct DataPanelView: View {
     var name: String
     var unit: String
     var value: String
-    @Binding var date: String
+    var date: String
     
     var body: some View {
         VStack{

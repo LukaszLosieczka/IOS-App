@@ -12,8 +12,8 @@ struct Training: Identifiable, Codable {
     var id: String
     var name = ""
     var numberOfExercises: Int = 0
-    var minutesOfExercises: Int = 0
-    var minutesOfResting: Int = 0
+    var minutesOfExercises: Double = 0
+    var minutesOfResting: Double = 0
     var caloriesBurned: Double = 0
     var image = ""
 }
