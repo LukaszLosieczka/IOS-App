@@ -12,6 +12,7 @@ struct LogInView: View {
     @State private var password = ""
     
     @EnvironmentObject var currentUser: CurrentUser
+    
     var body: some View {
         ScrollView(showsIndicators: false){
             
@@ -42,6 +43,7 @@ struct LogInView: View {
                     .cornerRadius(12)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
+                    .accessibilityIdentifier("EmailTextField")
                 
                 SecureField("Hasło", text:self.$password)
                     .placeholder(when: password.isEmpty){
@@ -53,6 +55,7 @@ struct LogInView: View {
                     .font(.system(size: 30,weight: .bold ,design: .serif))
                     .foregroundColor(Color(UIColor.darkGray))
                     .cornerRadius(12)
+                    .accessibilityIdentifier("PasswordTextField")
                 
             }
             
@@ -72,6 +75,7 @@ struct LogInView: View {
                     self.password = ""
                 }
             }
+            .accessibilityIdentifier("SignInButton")
             
             Spacer()
                 .frame(height: 50)

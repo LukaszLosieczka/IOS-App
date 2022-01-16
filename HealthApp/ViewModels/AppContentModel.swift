@@ -21,8 +21,8 @@ class CurrentUser: ObservableObject{
     //user
     @Published var user: User? = nil
     
-    init(){
-        if auth.currentUser != nil{
+    init(testing: Bool = false){
+        if auth.currentUser != nil && !CommandLine.arguments.contains("-loggedOut") && testing == false{
             loadUser()
             print("AKTUALNY UŻYTKOWNIK ID:")
             print(self.auth.currentUser!.uid)
@@ -30,7 +30,7 @@ class CurrentUser: ObservableObject{
         }
     }
     
-    func signIn(email: String, password: String){
+    func signIn(email: String, password: String) {
         auth.signIn(withEmail: email, password: password){
             [weak self] result, error in
             if error != nil{
@@ -118,6 +118,11 @@ class CurrentUser: ObservableObject{
         let db = Firestore.firestore()
         db.collection("users").document(self.auth.currentUser!.uid).collection("days").document((user?.days[0].id)!)
             .setData([fbName:newValue], merge: true)
+    }
+    
+    func changeGoal(name: String, value: Double){
+        let db = Firestore.firestore()
+        db.collection("users").document(self.auth.currentUser!.uid).setData([name:value], merge: true)
     }
     
     func changeMeasurement(name: String, value: Double){

@@ -14,6 +14,7 @@ struct ProfileView: View {
     
     @State private var loggedOut = false
     @State private var selection: String? = nil
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -21,7 +22,7 @@ struct ProfileView: View {
                     EmptyView()
                 }.navigationBarTitle("Profil")
                 
-                NavigationLink(destination: MissingContenView(), tag: "B", selection: $selection){
+                NavigationLink(destination: GoalSettingView(), tag: "B", selection: $selection){
                     EmptyView()
                 }.navigationBarTitle("Profil")
                 
@@ -38,6 +39,7 @@ struct ProfileView: View {
                             dismiss()
                         }
                         .font(.system(size: 20, weight: .bold))
+                        .accessibilityIdentifier("BackToMenuButton")
                         
                         Spacer()
                             .frame(width: 20)
@@ -53,6 +55,8 @@ struct ProfileView: View {
                                 .font(.system(size: 40,weight: .bold ,design: .serif))
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
+                                .accessibilityIdentifier("Profile")
+                            
                         }
                         
                         VStack(spacing: 40){
@@ -63,6 +67,7 @@ struct ProfileView: View {
                             Button("Edytuj cele"){
                                 selection = "B"
                             }.buttonStyle(CustomButton())
+                                .accessibilityIdentifier("GoalsButton")
                             
                             Button("Ustawienia"){
                                 selection = "C"
@@ -72,6 +77,7 @@ struct ProfileView: View {
                                 loggedOut.toggle()
                                 dismiss()
                             }.buttonStyle(CustomButton())
+                                .accessibilityIdentifier("SignOutButton")
                         }
                     }
                     

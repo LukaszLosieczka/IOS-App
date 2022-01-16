@@ -37,10 +37,13 @@ struct StartView: View {
                             selection = "A"
                         }
                             .buttonStyle(CustomButton())
+                            .accessibilityIdentifier("SignInNavButton")
+                        
                         Button("Zarejestruj się"){
                             selection = "B"
                         }
                             .buttonStyle(CustomButton())
+                            .accessibilityIdentifier("SignUpNavButton")
                     }
                     Spacer(minLength: 80)
                 }

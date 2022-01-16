@@ -94,7 +94,7 @@ struct WaterStatsView: View {
                             let progressValue = round(10 * self.progress * currentUser.user!.waterGoal) / 10
                             let goal = round(10 * currentUser.user!.waterGoal) / 10
                             
-                            self.text = String(progressValue) + " / " + String(goal/1000) + " l"
+                            self.text = String(progressValue/1000) + " / " + String(goal/1000) + " l"
                             
                             self.input = ""
                             self.isEditing = false

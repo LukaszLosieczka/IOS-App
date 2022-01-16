@@ -63,7 +63,7 @@ class TrainingsList: ObservableObject {
         }
     }
     
-    private func areListsSame(list1: [Training], list2: [Training]) -> Bool{
+    func areListsSame(list1: [Training], list2: [Training]) -> Bool{
         if list1.count != list2.count{
             return false
         }

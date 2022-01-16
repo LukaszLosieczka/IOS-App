@@ -41,6 +41,7 @@ struct MenuView: View {
                         Text("HealthApp")
                             .font(.system(size: 40,weight: .bold ,design: .serif))
                             .foregroundColor(.white)
+                            .accessibilityIdentifier("Menu")
                         
                         Spacer()
                         
@@ -51,6 +52,7 @@ struct MenuView: View {
                                 .resizable()
                         }
                         .buttonStyle(CircleImageButton())
+                        .accessibilityIdentifier("ProfileButton")
                         .sheet(isPresented: $showingProfile){
                             ProfileView()
                         }
@@ -135,10 +137,8 @@ struct MenuView: View {
         
         if currentDay.date != date{
             let newDay = Day(date:date)
-            if !((currentUser.user?.days.contains(where: { $0.hash == newDay.hash})) != nil){
-                currentDay = newDay
-                currentUser.addNewDay(day: newDay)
-            }
+            currentDay = newDay
+            currentUser.addNewDay(day: newDay)
         }
     }
     

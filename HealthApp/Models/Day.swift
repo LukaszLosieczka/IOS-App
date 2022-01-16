@@ -46,7 +46,7 @@ struct Day{
         let month = Int(dateArr[1]) ?? 0
         let day = Int(dateArr[0]) ?? 0
         
-        return (year * 1000) + (month * 100) + day
+        return (year * 10000) + (month * 100) + day
     }
     
     func getValue(name: String) ->Double{

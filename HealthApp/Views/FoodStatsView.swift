@@ -38,7 +38,7 @@ struct FoodStatsView: View {
                 VStack(spacing: 15){
                     TextField("", text:self.$input)
                         .placeholder(when: input.isEmpty){
-                            Text("Spożyte " + stats.namePL + "[" + stats.unit + "]")
+                            Text(stats.namePL + "[" + stats.unit + "]")
                                 .foregroundColor(.gray)
                                 .font(.system(size: 25,weight: .bold ,design: .serif))
                         }
